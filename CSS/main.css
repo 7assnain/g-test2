@@ -1,0 +1,32 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+
+}
+.maincontainer {
+
+}
+header {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+}
+.logo {
+    font-size: 30px;
+    position: absolute;
+    top: -15px;
+    left :20px;
+    color: #566dc5;
+}
+.headerlinks {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.headerlinks div {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
