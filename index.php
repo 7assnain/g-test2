@@ -19,13 +19,9 @@
             <div class="headerlinks">
             <div class="lang">lang</div>
             <div class="signcontainer">
-<<<<<<< HEAD
-            <div class="signinheader"><a href="login.php" class="signinlink">signin</a></div>
-            <div class="signupheader"><a href="registration.php" class="signinlink">signup</a></div>
-=======
+
             <div class="signinheader"><a href="login.php" class="Signinlink">Sign In</a></div>
             <div class="signupheader"><a href="registration.php" class="signuplink">Sign Up</a></div>
->>>>>>> 59b39c831eadb934ba42108845989afacd2a1c80
             </div>
             </div>
         </header>
