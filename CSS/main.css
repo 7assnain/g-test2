@@ -17,16 +17,21 @@ header {
     font-size: 30px;
     position: absolute;
     top: -15px;
-    left :20px;
+    left : 5%;
     color: #566dc5;
 }
 .headerlinks {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 22px;
 }
 .headerlinks div {
     display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.signcontainer a {
+    text-decoration: none;
+    
 }

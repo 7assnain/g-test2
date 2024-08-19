@@ -17,7 +17,7 @@
             <div class="lang">lang</div>
             <div class="signcontainer">
             <div class="signinheader"><a href="login.php" class="signinlink">signin</a></div>
-            <div class="signupheader"><a href="registration.php" class="signuplink">signup</a></div>
+            <div class="signupheader"><a href="registration.php" class="signinlink">signup</a></div>
             </div>
             </div>
         </header>
