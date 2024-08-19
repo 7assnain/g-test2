@@ -10,10 +10,10 @@ if (isset($_SESSION["user"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-
+    <link rel="stylesheet" href="CSS/signup.css">
 </head>
 <body>
-    <div >
+    <div class="signupcontainer">
         <?php
         if (isset($_POST["submit"])) {
            $fullName = $_POST["fullname"];
@@ -65,6 +65,7 @@ if (isset($_SESSION["user"])) {
 
         }
         ?>
+        <p class="signuptitle">Sign Up</p>
         <form action="registration.php" method="post">
             <div >
                 <input type="text"  name="fullname" placeholder="Full Name:">
@@ -79,11 +80,11 @@ if (isset($_SESSION["user"])) {
                 <input type="password" name="repeat_password" placeholder="Repeat Password:">
             </div>
             <div >
-                <input type="submit"  value="Register" name="submit">
+                <input type="submit"  value="Register" name="submit" class="submitsignup">
             </div>
         </form>
         <div>
-        <div><p>Already Registered <a href="login.php">Login Here</a></p></div>
+            <div class="loginsignup"><p>Already Registered <a href="login.php">Login Here</a></p></div>
       </div>
     </div>
 </body>

@@ -18,8 +18,8 @@
             <div class="searchbar"></div>
             <div class="headerlinks">
             <div class="lang">lang</div>
+            <div class="headershopcart"></div>
             <div class="signcontainer">
-
             <div class="signinheader"><a href="login.php" class="Signinlink">Sign In</a></div>
             <div class="signupheader"><a href="registration.php" class="signuplink">Sign Up</a></div>
             </div>
