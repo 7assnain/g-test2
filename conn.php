@@ -1,5 +1,6 @@
 <?php
 
+
 $hostName = "localhost";
 $dbUser = "root";
 $dbPassword = "";
@@ -11,4 +12,4 @@ if (!$conn) {
     die("Something went wrong");
 }
 
-?>
+?> 
