@@ -10,9 +10,10 @@ if (isset($_SESSION["users"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-
+    <link rel="stylesheet" href="CSS/signin.css">
 </head>
 <body>
+<div class="signincontainer">
     <div >
         <?php
         if (isset($_POST["login"])) {
@@ -36,6 +37,7 @@ if (isset($_SESSION["users"])) {
             }
         }
         ?>
+        <p class="signintitle">Sign In</p>
       <form action="login.php" method="post">
         <div >
             <input type="email" placeholder="Enter Email:" name="email" >
@@ -44,10 +46,11 @@ if (isset($_SESSION["users"])) {
             <input type="password" placeholder="Enter Password:" name="password">
         </div>
         <div>
-            <input type="submit" value="Login" name="login" >
+            <input type="submit" value="Login" name="login" class="submitsignin">
         </div>
       </form>
      <div><p>Not registered yet <a href="registration.php">Register Here</a></p></div>
+    </div>
     </div>
 </body>
 </html>
