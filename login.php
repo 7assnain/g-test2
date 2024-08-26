@@ -72,7 +72,6 @@ if (isset($_POST['submit'])){
 include "top_menu.php";
 ?>
 
-<h1>Login</h1>
 
 <div class="container">
     <div class="err-msg">
@@ -82,16 +81,30 @@ include "top_menu.php";
                 <?= $error_msg?>
             </div>
         <?php } ?>
-
+        
     </div>
-    <form action="" method="post">
+    <link rel="stylesheet" href="CSS/signin.css">
+    <style>
+    .showpasslabel {
+        position: relative;
+        right:110px;
+        top:-5px;
+    }
+    .showpassbox {
+        margin-top:15px;
+        margin-bottom: 10px;
+
+    }
+  </style>
+    <div class="signincontainer">
+        <h2 class="signintitle">Login</h2>
+        <form action="" method="post">
             <?php
              $display_email = isset($_COOKIE['remember_email']) ? $_COOKIE['remember_email'] : $email;
 
              $checked = !empty($remember) ? "checked" : (isset($_COOKIE['remember']) ? "checked" : "");
             ?>
         <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
             <input
                 type="text"
                 class="form-control"
@@ -105,7 +118,6 @@ include "top_menu.php";
         </div>
 
         <div class="mb-3">
-            <label for="pwd" class="form-label">Password</label>
             <input
                 type="password"
                 class="form-control"
@@ -117,7 +129,7 @@ include "top_menu.php";
            
         </div>
 
-       <div class="form-check">
+       <div class="form-check showpassbox">
         <input
             class="form-check-input"
             name="remember"
@@ -126,19 +138,20 @@ include "top_menu.php";
             value="checkedValue"
             aria-label="Remember Me"
             <?= $checked?>
-        />Remember Me
+        /><span class="showpasslabel">Remember Me</span>
        </div>
        
         <div class="reg-button text-center mt-3">
             <button
                 type="submit"
                 name = "submit"
-                class="btn btn-primary">
+                class="btn btn-primary submitsignin">
                 Login
             </button>
         </div>
         <p>Not Registered? Click <a href="register.php">here</a> to register</p>
     </form>
+    </div>
 </div>
 </body>
 </html>

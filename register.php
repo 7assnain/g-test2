@@ -78,30 +78,42 @@
   }
   include "top_menu.php";
   ?>
+  <link rel="stylesheet" href="CSS/signup.css">
   
-  <h1>Registration</h1>
-  
+  <style>
+    .showpasslabel {
+        position: relative;
+        right:110px;
+        top:-5px;
+    }
+    .showpassbox {
+        margin-top:15px;
+        margin-bottom: 10px;
+
+    }
+  </style>
   <div class="container">
       <div class="err-msg">
           <?php if (!empty($succ_msg)){ ?>
-              <div class="alert alert-success">
+            <div class="alert alert-success">
                   <?= $succ_msg?>
-              </div>
-          <?php } ?>
+                </div>
+                <?php } ?>
   
           <?php if (!empty($error_msg)){ ?>
               <div class="alert alert-danger">
                   <?= $error_msg?>
               </div>
-          <?php } ?>
-  
-      </div>
+              <?php } ?>
+              
+            </div>
+            <div class="signupcontainer">
+          <h2 class="signuptitle">Registration</h2>
       <form action="" method="post">
-          <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
+          <div class="">
               <input
                   type="text"
-                  class="form-control"
+                  class="namefield"
                   name="name"
                   id="name"
                   placeholder="Enter Name"
@@ -112,7 +124,6 @@
           </div>
   
           <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
               <input
                   type="text"
                   class="form-control"
@@ -126,7 +137,6 @@
           </div>
   
           <div class="mb-3">
-              <label for="pwd" class="form-label">Password</label>
               <input
                   type="password"
                   class="form-control"
@@ -139,7 +149,6 @@
           </div>
   
           <div class="mb-3">
-              <label for="conf_pwd" class="form-label">Confirm Password</label>
               <input
                   type="password"
                   class="form-control"
@@ -151,28 +160,33 @@
               
           </div>
   
-          <div class="form-check">
+          <div class="form-check showpassbox">
           <input
-              class="form-check-input"
+              class="form-check-input "
+              style="margin-top:20px;
+                        position: relative;
+                        left: px;
+              "
               name=""
               id=""
               type="checkbox"
               value="checkedValue"
               aria-label="Show Password"
               onclick = "showPwd()"
-          />Show Password
+          /> <span class="showpasslabel">Show Password</span>
           </div>
           
           <div class="reg-button text-center mt-3">
               <button
                   type="submit"
                   name = "submit"
-                  class="btn btn-primary">
+                  class="btn btn-primary submitsignup">
                   Register
               </button>
           </div>
           <p>Already Registered? Login <a href="login.php">here</a></p>
       </form>
+      </div>
   </div>
   <script>
       function showPwd(){
