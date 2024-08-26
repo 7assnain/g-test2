@@ -1,6 +1,8 @@
 <?php
 include "top_menu.php";
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +25,8 @@ include "top_menu.php";
             <div class="lang">lang</div>
             <div class="headershopcart"></div>
             <div class="signcontainer">
-            <div class="signinheader"><a href="login.php" class="Signinlink">Sign In</a></div>
-            <div class="signupheader"><a href="register.php" class="signuplink">Sign Up</a></div>
+            <!-- <div class="signinheader"><a href="login.php" class="Signinlink">Sign In</a></div>
+            <div class="signupheader"><a href="register.php" class="signuplink">Sign Up</a></div> -->
             </div>
             </div>
         </header>
