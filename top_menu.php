@@ -17,17 +17,19 @@ session_start()
     <body>
         <div class="topmenu">
             <div class="menubar">
-                <!-- <a href="index.php">Home</a> -->
-                <?php if (isset($_SESSION['name'])){ ?>
-                    <div class="user">
-                        <span><a href ="login.php" class="huseracount"> <?= $_SESSION['name']?></a> </span>
-                        <a href="logout.php">Logout</a>
-                    </div>
+
+                <?php
+                if (isset($_SESSION['name'])){
+                    $str=$_SESSION['name'];
+                    
+
+                ?>
+                    <div><span><a href ="later.php" class="huseracount"> <?php echo $str[0];?></a> </span></div>
+                     
+                     <div><a href="logout.php">Logout</a></div>
+
                   
-               <?php } else { ?>
-                <!-- <a href="register.php">Register</a>
-                <a href="login.php">Login</a> -->
-                <?php } ?>
+               <?php } ?>
             </div>
         </div>
 
