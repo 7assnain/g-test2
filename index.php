@@ -18,7 +18,12 @@
             </div>
             <div class="searchbar"></div>
             <div class="headerlinks">
-            <div class="langfield">lang</div>
+            <div class="langfield">
+                <select name="language" id="lang">
+                    <option value="defult" selected>Lang</option>
+                    <option value="ar" id="arlang" >Arabic</option>
+                    <option value="en" id="enlang">English</option>
+                </select></div>
             <div class="headershopcart"></div>
             <div class="signcontainer">
             <div class="signinheader"><a href="login.php" class="Signinlink">Sign In</a></div>
@@ -26,8 +31,9 @@
             </div>
             </div>
         </header>
-        <h2 class="product">product</h2>
+        
     </div>
+    <script src="JS/lang.js"></script>
     <script src="JS/main.js"></script>
 </body>
 </html>
