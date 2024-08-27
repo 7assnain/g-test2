@@ -16,6 +16,21 @@ include "top_menu.php";
     .langfield {
         right: 22%;
     }
+    .adminsigndiv {
+        position:absolute;
+        top:40%;
+        left : 35%;
+        text-align :center;
+    }
+    .adminsigndiv h2{
+        color : #566dc5;
+    }
+    .adminsigndiv p{
+        font-size :20px;
+    }
+    .adminsigndiv span {
+        color : #566dc5;
+    }
 </style>
 </head>
 <body>
@@ -39,7 +54,12 @@ include "top_menu.php";
             </div>
             </div>
         </header>
-        
+        <section>
+        <div class="adminsigndiv">
+                <h2>Wellcome in admin panel registration</h2>
+                <p><span>"</span> please sign and go to admin panel <span>"</span></p>
+            </div>
+        </section>
     </div>
     <script src="JS/lang.js"></script>
     <script src="JS/main.js"></script>
