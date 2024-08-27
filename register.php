@@ -73,7 +73,8 @@
           catch(Exception $e){
               $error_msg = $e->getMessage();
           }
-  
+          $_SESSION['name'] = $row['name'];
+          header("location:login.php");
       }
   }
   include "top_menu.php";
