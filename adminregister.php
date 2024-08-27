@@ -26,7 +26,7 @@
               $error = true;
           }
       else{   // check if email already registered
-          $sql = "select * from users where email = ?";
+          $sql = "select * from admins where email = ?";
           $stmt = $conn->prepare($sql);
           $stmt->bind_param("s",$email);
           $stmt->execute();
