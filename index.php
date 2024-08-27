@@ -8,10 +8,15 @@ include "top_menu.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>g-test</title>
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/lang.css">
+    <link rel="stylesheet" href="CSS/lange.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    .langfield {
+        right: 22%;
+    }
+</style>
 </head>
 <body>
     <div class="maincontainer">
