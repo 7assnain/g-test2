@@ -24,6 +24,30 @@ include "top_menu.php";
     width: 35px;
     height: 35px;
 }
+.productsheadlink {
+    color : #566dc5;
+    font-size: 20px;
+}
+.productslink {
+    position: absolute;
+    left: 20%;
+    top: 23px;
+}
+.adminsigndiv {
+        position:absolute;
+        top:42%;
+        left : 30%;
+        text-align :center;
+    }
+    .adminsigndiv h2{
+        color : #566dc5;
+    }
+    .adminsigndiv p{
+        font-size :20px;
+    }
+    .adminsigndiv span {
+        color : #566dc5;
+    }
 </style>
 </head>
 <body>
@@ -34,6 +58,7 @@ include "top_menu.php";
             </div>
             <div class="searchbar"></div>
             <div class="headerlinks">
+                <div class="productslink"><a href="products.php" class="productsheadlink">Products</a></div>
             <div class="langfield">
                 <select name="language" id="lang">
                     <option value="defult" selected>Lang</option>
@@ -47,6 +72,12 @@ include "top_menu.php";
             </div> -->
             </div>
         </header>
+        <section>
+        <div class="adminsigndiv">
+                <h2>Wellcome in Our Ecommerce store since 2020</h2>
+                <p><span>"</span> please relax and Enjoy the best store <span>"</span></p>
+            </div>
+        </section>
     </div>
     <script src="JS/main.js"></script>
 </body>
