@@ -56,8 +56,8 @@ include "top_menu.php";
         </header>
         <section>
         <div class="adminsigndiv">
-                <h2>Wellcome in admin panel registration</h2>
-                <p><span>"</span> please sign and go to admin panel <span>"</span></p>
+                <h2>Wellcome in User page registration</h2>
+                <p><span>"</span> please sign and go to Home page <span>"</span></p>
             </div>
         </section>
     </div>
