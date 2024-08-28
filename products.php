@@ -28,7 +28,96 @@
             <a href="index2.php">G</a>
         </div>
     </header>
-    <h2>products page</h2>
+  
+
+    <header >
+            <h1> Products Page </h1><!--products list-->
+
+        </header>
+
+
+        <?php
+        // session_start();
+        if (isset($_SESSION["create"])) {
+        ?>
+        <div >
+            <?php 
+            echo $_SESSION["create"];
+            ?>
+        </div>
+        <?php
+        unset($_SESSION["create"]);
+        }
+        ?>
+
+        <?php
+        if (isset($_SESSION["delete"])) {
+        ?>
+        <div>
+            <?php 
+            echo $_SESSION["delete"];
+            ?>
+        </div>
+        <?php
+        unset($_SESSION["delete"]);
+        }
+        ?>
+
+    </div>  
+
+    <table >
+
+        <thead>
+
+            <tr>
+
+                <th>id</th>
+                <th>Image</th><!--image-->
+                <th>Name</th><!--name-->
+                <th>Price</th><!--price-->
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <?php
+            include('cfg/dbconnect.php');// cfg/dbconnect.php
+            $sql = "SELECT * FROM  products";//recorrect table name
+            $result = mysqli_query($conn,$sql);
+
+            while($data = mysqli_fetch_array($result)){
+             ?>
+
+             <tr>
+
+                <td><?php echo $data ['id'];?></td>
+                <td><img src="<?php echo $data ['Image'];?>"></td><!--image-->
+                <td><?php echo $data ['Name'];?></td><!--name-->
+                <td><?php echo $data ['Price'];?></td><!--price-->
+                <td>
+                    <a href="view.php?id=<?php echo $data['id']; ?>" >Read More</a>
+                    <a href="delete.php?id=<?php echo $data['id']; ?>" >Delete</a>
+
+                </td>
+
+             </tr>
+
+            <?php
+        }?>        
+
+
+        </tbody>
+
+
+    </table>
+
+
+
+</body>
+</html>
     
 </body>
 </html>
