@@ -1,16 +1,17 @@
-<?php include('top_menu.php');?>
+<?php include('top_menu.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>products</title>
-    <link rel="stylesheet" href="CSS/productspage.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/productsconpage.css">
+    <title>Products control</title><!--products list-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-<style>
-                .headerlogo {
+    <style>
+         .headerlogo {
         font-size: 30px;
         position: absolute;
         font-weight: 800;
@@ -21,21 +22,19 @@
             color: #566dc5;
     }
     </style>
+
 </head>
 <body>
 <header>
         <div class="headerlogo">
             <a href="index2.php">G</a>
         </div>
+        <div class="headershopcart"><a href="shopcart.php"><img src="img/shopingcart.png" alt=""></a></div>
+        <div class="productspagetitle">
+            <h2>Our Products</h2>
+        </div>
     </header>
-  
-
-    <header >
-            <h1> Products Page </h1><!--products list-->
-
-        </header>
-
-
+    <div >
         <?php
         // session_start();
         if (isset($_SESSION["create"])) {
@@ -67,21 +66,21 @@
 
     <table >
 
-        <thead>
+        <!-- <thead>
 
             <tr>
 
                 <th>id</th>
-                <th>Image</th><!--image-->
-                <th>Name</th><!--name-->
-                <th>Price</th><!--price-->
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
                 <th>Action</th>
 
             </tr>
 
-        </thead>
+        </thead> -->
 
-        <tbody>
+        <tbody class="maincardcontainer">
 
             <?php
             include('cfg/dbconnect.php');// cfg/dbconnect.php
@@ -91,31 +90,19 @@
             while($data = mysqli_fetch_array($result)){
              ?>
 
-             <tr>
-
-                <td><?php echo $data ['id'];?></td>
-                <td><img src="<?php echo $data ['Image'];?>"></td><!--image-->
-                <td><?php echo $data ['Name'];?></td><!--name-->
-                <td><?php echo $data ['Price'];?></td><!--price-->
-                <td>
-                    <a href="view.php?id=<?php echo $data['id']; ?>" > More</a>
+             <tr class="cardcontainer">
+                <td class="cardimg"><img src="<?php echo $data ['Image'];?>"></td><!--image-->
+                <!-- <td class="cardid"><span>Id : </span><?php //echo $data ['id'];?></td> -->
+                <td class="cardname"><span>Name : </span><?php echo $data ['Name'];?></td><!--name-->
+                <td class="cardprice"><span>Price : </span><?php echo $data ['Price'];?><span class="dolarsign"> $</span></td><!--price-->
+                <td class="cardlinks">
+                    <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
+                    <a href="">Add To Cart</a>
                 </td>
-
              </tr>
-
             <?php
         }?>        
-
-
         </tbody>
-
-
     </table>
-
-
-
-</body>
-</html>
-    
 </body>
 </html>
