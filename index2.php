@@ -48,10 +48,7 @@ include "top_menu.php";
     .adminsigndiv span {
         color : #566dc5;
     }
-    .adminsigndiv h2 span{
-        color :black;
-        font-size :10px;
-    }
+
 </style>
 </head>
 <body>
@@ -78,7 +75,7 @@ include "top_menu.php";
         </header>
         <section>
         <div class="adminsigndiv">
-                <h2>Wellcome in Our Ecommerce store since <span>"</span> 2020 <span>"</span></h2>
+                <h2>Wellcome in Our Ecommerce store since 2020</h2>
                 <p><span>"</span> please relax and Enjoy the best store <span>"</span></p>
             </div>
         </section>
