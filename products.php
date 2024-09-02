@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/productsconpage.css">
+    <link rel="stylesheet" href="CSS/productspage1.css">
+    <link rel="stylesheet" href="CSS/shoppingcart.css">
     <title>Products control</title><!--products list-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +22,9 @@
     .headerlogo a {
             color: #566dc5;
     }
+    td div {
+        display : inline-block ;
+    }
     </style>
 
 </head>
@@ -29,11 +33,27 @@
         <div class="headerlogo">
             <a href="index2.php">G</a>
         </div>
-        <div class="headershopcart"><a href="shopcart.php"><img src="img/shopingcart.png" alt=""></a></div>
+        <div class="headershopcart"><span onclick="togglecart()"><img src="img/shopingcart.png" alt="" class="shopcartimg"></span></div>
         <div class="productspagetitle">
             <h2>Our Products</h2>
         </div>
     </header>
+    <div class="shoppingcartcontainer" id="cartcard">
+        <div class="cartcontainerheader">
+            <h4>Shop cart</h4>
+        </div>
+        <div class="cartcontainermain">
+            <table id="carttable">
+                <tbody id="carttbody">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="cartcontainerfooter">
+            <a href="shopcart.php">Manege Cart</a>
+            <!-- <span class="closecartcontainer">Close</span> -->
+        </div>
+    </div>
     <div >
         <?php
         // session_start();
@@ -90,19 +110,27 @@
             while($data = mysqli_fetch_array($result)){
              ?>
 
-             <tr class="cardcontainer">
-                <td class="cardimg"><img src="<?php echo $data ['Image'];?>"></td><!--image-->
-                <!-- <td class="cardid"><span>Id : </span><?php //echo $data ['id'];?></td> -->
-                <td class="cardname"><span>Name : </span><?php echo $data ['Name'];?></td><!--name-->
-                <td class="cardprice"><span>Price : </span><?php echo $data ['Price'];?><span class="dolarsign"> $</span></td><!--price-->
+             <tr class="cardcontainer" id="cardcontainer">
+                <td class="cardimg"><img src="<?php echo $data ['Image'];?>" id="productimg"></td><!--image-->
+                <td class="cardid" style="display :none;"><span>Id : </span><div id="productid"><?phpecho $data ['id'];?></div></td>
+                <td class="cardname"><span>Name : </span><div id="productname"><?php echo $data ['Name'];?></div></td><!--name-->
+                <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
                 <td class="cardlinks">
                     <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
-                    <a href="">Add To Cart</a>
+                    <span id="addtocartbutton" >Add To Cart</span>
                 </td>
              </tr>
             <?php
         }?>        
         </tbody>
     </table>
+    <script>
+                let cartcard = document.getElementById("cartcard");
+                function togglecart(){
+                    cartcard.classList.toggle("opencart");
+                }
+            </script>
+            <!-- edit to suit the shop cart -->
+                <script src="JS/addcart.js"></script>
 </body>
 </html>

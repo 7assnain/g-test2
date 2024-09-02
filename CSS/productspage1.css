@@ -66,6 +66,24 @@ tr td a {
     text-align: center;
     width: 80%;
     margin-top: 8px;
+    margin-bottom: 16px;
+}
+.cardlinks span{
+    padding: 8px;
+    border-radius: 25px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #566dc5;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    margin-top: 8px;
+    padding-right: 27.5px;
+    padding-left: 27.5px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
 }
 .cardlinks {
     margin-top: 50px;
@@ -84,9 +102,12 @@ tr td a {
     top :18px;
     right: 25px;
 }
-.headershopcart a img {
+.headershopcart span img {
     width: 35px;
     height: 35px;
+}
+.headershopcart span {
+    cursor: pointer;
 }
 tbody {
     margin-bottom: 100px;

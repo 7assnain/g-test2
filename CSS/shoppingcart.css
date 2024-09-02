@@ -1,0 +1,45 @@
+.shoppingcartcontainer {
+    width: 300px;
+    height: 550px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2.5px 2.5px 32px  rgba(82, 78, 78, 0.278);
+    max-width: 0px;
+    overflow: hidden;
+    transition: max-width 0.4s;
+    position: absolute;
+    right: 10px;
+    z-index: 1000;
+}
+.shoppingcartcontainer.opencart {
+    max-width: 320px;
+}
+.cartcontainerheader h4 {
+    color: #566dc5;
+    text-align: center;
+}
+.cartcontainerfooter a {
+    padding: 8px;
+    border-radius: 25px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #566dc5;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    /* width: 80%; */
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-top: 8px;
+}
+.cartcontainerfooter {
+    text-align: center;
+    padding-top: 10px;
+}
+.shoppingcartcontainer {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+.shoppingcartcontainer div {
+    overflow: auto;
+}
