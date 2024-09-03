@@ -68,23 +68,38 @@ tr td a {
     margin-top: 8px;
     margin-bottom: 16px;
 }
-.cardlinks span{
-    padding: 8px;
+.cardlinks input{
+    /* padding: 10px;
+    border-width: 0;
     border-radius: 25px;
     font-size: 15px;
     text-decoration: none;
     background-color: #566dc5;
     color: white;
     font-weight: 700;
-    text-align: center;
     width: 80%;
     margin-top: 8px;
     padding-right: 27.5px;
     padding-left: 27.5px;
     text-align: center;
     margin-top: 10px;
+    cursor: pointer; */
+    margin-left: 10px;
+    background-color: #566dc5;
+    color: white;
+    border-radius: 25px;
+    border-width: 0px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 9px;
+    padding-right: 27.2px;
+    padding-left: 27.2px;
+    position: relative;
+    right: 8px;
+    bottom: 8px;
     cursor: pointer;
 }
+
 .cardlinks {
     margin-top: 50px;
     margin-left: 45px;

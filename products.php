@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/productspage1.css">
+    <link rel="stylesheet" href="CSS/productspage2.css">
     <link rel="stylesheet" href="CSS/shoppingcart.css">
     <title>Products control</title><!--products list-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,8 +117,7 @@
                 <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
                 <td class="cardlinks">
                     <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
-                    <span id="addtocartbutton" >Add To Cart</span>
-                </td>
+                    <input type="submit" name="Add" value="Add To Cart" class="addtocartbutton"></td>
              </tr>
             <?php
         }?>        
@@ -131,6 +130,5 @@
                 }
             </script>
             <!-- edit to suit the shop cart -->
-                <script src="JS/addcart.js"></script>
 </body>
 </html>
