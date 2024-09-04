@@ -1,18 +1,27 @@
 <?php
 include("cfg/dbconnect.php");// cfg/dbconnect.php
 
-if (isset($_POST["Buy"])) {
-    $Image = mysqli_real_escape_string($conn, $_POST["Image"]);//image
-    $Name = mysqli_real_escape_string($conn, $_POST["Name"]);//name
-    $Price = mysqli_real_escape_string($conn, $_POST["Price"]);//price
-    $Description = mysqli_real_escape_string($conn, $_POST["Description"]);//description
-    $sqlInsert = "INSERT INTO orders(Image , Name , Price , Description ) 
-    VALUES ('$Image','$Name','$Price', '$Description')";//recorrect table name image , name , price , description
+if (isset($_POST["Confirm"])) {
+    $Username = mysqli_real_escape_string($conn, $_POST["Username"]);//image
+    $Useremail = mysqli_real_escape_string($conn, $_POST["Useremail"]);//image
+    $Userlocation = mysqli_real_escape_string($conn, $_POST["Userlocation"]);//image
+    $Paymethod = mysqli_real_escape_string($conn, $_POST["Paymethod"]);//image
+    // $Product_id = mysqli_real_escape_string($conn, $_POST["Product_id"]);//image
+    $Product_image = mysqli_real_escape_string($conn, $_POST["Product_image"]);//image
+    $Product_name = mysqli_real_escape_string($conn, $_POST["Product_name"]);//name
+    $Product_price = mysqli_real_escape_string($conn, $_POST["Product_price"]);//price
+    $Product_count = mysqli_real_escape_string($conn, $_POST["Product_count"]);//description
+    $sqlInsert = "INSERT INTO orders
+    (Username , Useremail , Userlocation , Paymethod , 
+      Product_image , Product_name , Product_price , Product_count  ) 
+    VALUES 
+    ('$Username	','$Useremail','$Userlocation', '$Paymethod' ,
+     '$Product_image', '$Product_name', '$Product_price', '$Product_count')";//recorrect table name image , name , price , description
     if(mysqli_query($conn,$sqlInsert)){
 
-        // session_start();
-        // $_SESSION["create"] = "Product Added Successfully!";// product 
-        header("Location:buy.php");
+        session_start();
+        $_SESSION["create"] = "Product Added Successfully!";// product 
+        header("Location:shopcart.php");
 
     }else{
         die("Something went wrong");
