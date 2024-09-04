@@ -43,11 +43,7 @@
             <h4>Shop cart</h4>
         </div>
         <div class="cartcontainermain">
-            <table id="carttable">
-                <tbody id="carttbody">
 
-                </tbody>
-            </table>
         </div>
         <div class="cartcontainerfooter">
             <a href="shopcart.php">Manege Cart</a>
@@ -117,7 +113,15 @@
                 <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
                 <td class="cardlinks">
                     <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
-                    <input type="submit" name="Add" value="Add To Cart" class="addtocartbutton"></td>
+                        <form action="cartprocess.php" method="post">
+                        <!-- <input type="text" name="" id="" value="<?php //echo $data ['id'];?>" > -->
+                        <input type="text" name="Image" id="" value="<?php echo $data ['Image'];?>" style="display :none;">
+                        <input type="text" name="Name" id="" value="<?php echo $data ['Name'];?>" style="display :none;">
+                        <input type="text" name="Price" id="" value="<?php echo $data ['Price'];?>" style="display :none;">
+                        <input type="text" name="Description" id="" value="<?php echo $data ['Description'];?>" style="display :none;">
+                        <input type="submit" name="Addtocart" value="Add To Cart" class="addtocartbutton">
+                    </form>
+                </td>
              </tr>
             <?php
         }?>        
