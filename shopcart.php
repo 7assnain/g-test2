@@ -108,7 +108,15 @@
                 
                 <td class="cardlinks">
                     <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
-                    <a href="buy.php">Buy</a>
+                    <form action="buyprocess.php" method="post">
+                        <!-- <input type="number" name="Product_count" id="" min="1" max="50" value="1"> -->
+                        <!-- <input type="text" name="" id="" value="<?php //echo $data ['id'];?>" > -->
+                        <input type="text" name="Image" id="" value="<?php echo $data ['Image'];?>" style="display :none;">
+                        <input type="text" name="Name" id="" value="<?php echo $data ['Name'];?>" style="display :none;">
+                        <input type="text" name="Price" id="" value="<?php echo $data ['Price'];?>" style="display :none;">
+                        <input type="text" name="Description" id="" value="<?php echo $data ['Description'];?>" style="display :none;">
+                        <input type="submit" name="Buy" value="Buy" class="addtocartbutton">
+                    </form>
                     <a href="delete.php?id=<?php echo $data['id']; ?>" class="carddeletelink">X</a>
                 </td>
              </tr>
