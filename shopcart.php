@@ -1,12 +1,13 @@
 <?php include('top_menu.php')?>
+<?php include('delete.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/cartpage1.css">
     <link rel="stylesheet" href="CSS/productspage2.css">
-    <link rel="stylesheet" href="CSS/shoppingcart.css">
     <title>Shop Cart </title><!--products list-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +32,7 @@
 <body>
 <header>
         <div class="headerlogo">
-            <a href="index2.php">G</a>
+            <a href="products.php">G</a>
         </div>
         <!-- <div class="headershopcart"><span onclick="togglecart()"><img src="img/shopingcart.png" alt="" class="shopcartimg"></span></div> -->
         <div class="productspagetitle">
@@ -99,13 +100,16 @@
              ?>
 
              <tr class="cardcontainer" id="cardcontainer">
+
                 <td class="cardimg"><img src="<?php echo $data ['Image'];?>" id="productimg"></td><!--image-->
                 <td class="cardid" style="display :none;"><span>Id : </span><div id="productid"><?phpecho $data ['id'];?></div></td>
                 <td class="cardname"><span>Name : </span><div id="productname"><?php echo $data ['Name'];?></div></td><!--name-->
                 <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
+                
                 <td class="cardlinks">
                     <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
                     <a href="buy.php">Buy</a>
+                    <a href="delete.php?id=<?php echo $data['id']; ?>" class="carddeletelink">X</a>
                 </td>
              </tr>
             <?php
