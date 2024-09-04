@@ -20,7 +20,7 @@ session_start()
     
     <input type="url" name="Userlocation" placeholder="Enter your location" required>
     
-    <input id="visa" type="radio" name="Paymethod" value="visa"  focus/>
+    <input id="visa" type="radio" name="Paymethod" value="visa"  checked/>
     <label for="visa">Visa</label>
     
     <input id="MasterCard" type="radio" name="Paymethod" value="MasterCard" />

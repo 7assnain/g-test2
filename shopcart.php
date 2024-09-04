@@ -1,13 +1,13 @@
 <?php include('top_menu.php')?>
-<?php include('delete.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/cartpage1.css">
+    <link rel="stylesheet" href="CSS/cartpage.css">
     <link rel="stylesheet" href="CSS/productspage2.css">
+    <link rel="stylesheet" href="CSS/shoppingcart.css">
     <title>Shop Cart </title><!--products list-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 <body>
 <header>
         <div class="headerlogo">
-            <a href="products.php">G</a>
+            <a href="index2.php">G</a>
         </div>
         <!-- <div class="headershopcart"><span onclick="togglecart()"><img src="img/shopingcart.png" alt="" class="shopcartimg"></span></div> -->
         <div class="productspagetitle">
@@ -100,21 +100,23 @@
              ?>
 
              <tr class="cardcontainer" id="cardcontainer">
-
                 <td class="cardimg"><img src="<?php echo $data ['Image'];?>" id="productimg"></td><!--image-->
                 <td class="cardid" style="display :none;"><span>Id : </span><div id="productid"><?phpecho $data ['id'];?></div></td>
                 <td class="cardname"><span>Name : </span><div id="productname"><?php echo $data ['Name'];?></div></td><!--name-->
                 <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
-                
                 <td class="cardlinks">
                     <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
-                    <form action="buyprocess.php" method="post">
+                    <form action="pbprocess.php" method="post">
+                        <div class="cardcountdiv">
+                        <span>Count : </span>
+                        <input type="number" name="Count" id="" value="1" min="1" max="50" class="cardcountinput">
+                        </div>
                         <!-- <input type="text" name="" id="" value="<?php //echo $data ['id'];?>" > -->
                         <input type="text" name="Image" id="" value="<?php echo $data ['Image'];?>" style="display :none;">
                         <input type="text" name="Name" id="" value="<?php echo $data ['Name'];?>" style="display :none;">
                         <input type="text" name="Price" id="" value="<?php echo $data ['Price'];?>" style="display :none;">
                         <input type="text" name="Description" id="" value="<?php echo $data ['Description'];?>" style="display :none;">
-                        <input type="submit" name="Buy" value=" Buy " class="addtocartbutton">
+                        <input type="submit" name="Buy" value=" Buy " class="buybutton">
                     </form>
                     <a href="delete.php?id=<?php echo $data['id']; ?>" class="carddeletelink">X</a>
                 </td>
