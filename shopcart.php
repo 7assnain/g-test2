@@ -32,7 +32,7 @@
 <body>
 <header>
         <div class="headerlogo">
-            <a href="index2.php">G</a>
+            <a href="products.php">G</a>
         </div>
         <!-- <div class="headershopcart"><span onclick="togglecart()"><img src="img/shopingcart.png" alt="" class="shopcartimg"></span></div> -->
         <div class="productspagetitle">
