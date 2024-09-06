@@ -28,9 +28,20 @@
             $result = mysqli_query($conn , $sql);
                 while($row=mysqli_fetch_array($result)){
         ?>
+                            <?php 
+                $sql = "SELECT * FROM images  ";//
+                $res = mysqli_query($conn,  $sql);//
+
+                if (mysqli_num_rows($res) > 0) {
+                    while ($images = mysqli_fetch_assoc($res)) {  ?>
+             
+             	        <?php if( $images ['id'] === $row ['id']){ $test= $images ['image_url']; } ?>
+                            <!-- <img src="uploads/<?php //echo $images ['image_url']; ?>" alt="">  -->
+                       
+			  <?php } }?> 
 
                 <!-- <h3>Image:</h3> -->
-                 <div class="viewimgcontainer"><img src="<?php echo $row["Image"]; ?>" ></div><!--image-->
+                 <div class="viewimgcontainer"><img src="../g-controller/uploads/<?php  echo $test ;?>" alt="" style="width:100px ; height:100px"></div><!--image-->
                  <div class="viewinfcontainer">
                  <div class="namemaincontainer">
                  <h3>Name:</h3><!--name-->
@@ -45,9 +56,7 @@
                  <div class="viewdesconainer"><?php echo $row["Description"]; ?><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla quam vero, porro necessitatibus quisquam saepe assumenda, pariatur aliquam ea reprehenderit eos ducimus ut? Eligendi tempora delectus sint neque fugiat.</p></div><!--description-->
                  </div>
                  </div>
-                    <div class="viewaddtocart">
-                    <a href="">Add To Cart</a>
-                    </div>
+
         <?php
                 }
             }
