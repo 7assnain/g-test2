@@ -21,10 +21,6 @@ table {
     position: absolute;
     top: 26%;
     left: 6.2%;
-    /*width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;  */
 }
 tbody {
     width: 100%;
@@ -69,21 +65,6 @@ tr td a {
     margin-bottom: 16px;
 }
 .cardlinks input{
-    /* padding: 10px;
-    border-width: 0;
-    border-radius: 25px;
-    font-size: 15px;
-    text-decoration: none;
-    background-color: #566dc5;
-    color: white;
-    font-weight: 700;
-    width: 80%;
-    margin-top: 8px;
-    padding-right: 27.5px;
-    padding-left: 27.5px;
-    text-align: center;
-    margin-top: 10px;
-    cursor: pointer; */
     margin-left: 10px;
     background-color: #566dc5;
     color: white;
@@ -104,14 +85,6 @@ tr td a {
     margin-top: 50px;
     margin-left: 45px;
 }
-.cardimg {
-    /* position: relative;
-    left: 35%; */
-    padding-top: 30px;
-    height: 120px;
-    width: 80;
-    justify-content: center;
-}
 .headershopcart {
     position: absolute;
     top :18px;
@@ -130,11 +103,13 @@ tbody {
 .cardname {
     margin-top: 20px;
 }
-.cardimg {
-    display: flex;
-    align-items: center;
-}
-.cardimg img {
+tr td img {
     width: 100px;
     height: 100px;
+}
+.cardimg {
+    padding-left: 30px !important;
+}
+.cardname {
+    padding-top: 20px;
 }

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/productspage2.css">
-    <link rel="stylesheet" href="CSS/shoppingcart.css">
+    <link rel="stylesheet" href="CSS/productpage.css">
+    <link rel="stylesheet" href="CSS/cartbox.css">
     <title>Products control</title><!--products list-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,14 +42,14 @@
         <div class="cartcontainerheader">
             <h4>Shop cart</h4>
         </div>
-        <div class="cartcontainermain">
-
-        </div>
+            <div class="boxcartcontainermain">
+                
+            </div>
         <div class="cartcontainerfooter">
             <a href="shopcart.php">Manege Cart</a>
             <!-- <span class="closecartcontainer">Close</span> -->
         </div>
-    </div>
+        </div>
     <div >
         <?php
         // session_start();
@@ -81,21 +81,6 @@
     </div>  
 
     <table >
-
-        <!-- <thead>
-
-            <tr>
-
-                <th>id</th>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Action</th>
-
-            </tr>
-
-        </thead> -->
-
         <tbody class="maincardcontainer">
 
             <?php
@@ -122,7 +107,7 @@
 
 		
                 </td>
-                <td><img src="../g-controller/uploads/<?php  echo $test ;?>" alt="" style="width:100px ; height:100px"></td>
+                <td class="cardimg"><img src="../g-test2-controller/uploads/<?php  echo $test ;?>" alt="" style="width:100px ; height:100px"></td>
                 <td class="cardid" style="display :none;"><span>Id : </span><div id="productid"><?php echo $data ['id'];?></div></td>
                 <td class="cardname"><span>Name : </span><div id="productname"><?php echo $data ['Name'];?></div></td><!--name-->
                 <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->

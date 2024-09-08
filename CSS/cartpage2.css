@@ -3,7 +3,7 @@ td .carddeletelink {
     background-color: transparent !important;
     position: relative !important;
     left: 90px !important;
-    bottom: 415px !important;
+    bottom: 410px !important;
 }
 td form .cardcountinput {
     color: black;
@@ -16,15 +16,24 @@ td form .cardcountinput {
 .cardcountdiv {
     display: inline-block;
     position: relative;
-    bottom: 104px;
+    bottom: 125px !important;
     right: 10px;
 }
 .cardmorelink {
     padding-top: 10px !important;
+}
+.shopcartlinks {
+    margin-top: 15px;
 }
 .buybutton {
     position: relative;
     bottom: 35px !important;
     padding-left: 50px !important;
     padding-right: 50px !important;
+}
+.cardname {
+    margin-top: 40px !important;
+}
+.cardimgcon {
+    padding-left: 25px;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/cartpage.css">
+    <link rel="stylesheet" href="CSS/cartpage2.css">
     <link rel="stylesheet" href="CSS/productspage2.css">
     <link rel="stylesheet" href="CSS/shoppingcart.css">
     <title>Shop Cart </title><!--products list-->
@@ -19,9 +19,9 @@
         font-weight: 800;
         top: 15px;
         left : 5%;
-    }s
+    }
     .headerlogo a {
-            color: #566dc5;
+        color: #566dc5;
     }
     td div {
         display : inline-block ;
@@ -34,27 +34,10 @@
         <div class="headerlogo">
             <a href="products.php">G</a>
         </div>
-        <!-- <div class="headershopcart"><span onclick="togglecart()"><img src="img/shopingcart.png" alt="" class="shopcartimg"></span></div> -->
         <div class="productspagetitle">
             <h2>Your Products</h2>
         </div>
     </header>
-    <!-- <div class="shoppingcartcontainer" id="cartcard">
-        <div class="cartcontainerheader">
-            <h4>Shop cart</h4>
-        </div>
-        <div class="cartcontainermain">
-            <table id="carttable">
-                <tbody id="carttbody">
-
-                </tbody>
-            </table>
-        </div>
-        <div class="cartcontainerfooter">
-            <a href="shopcart.php">Manege Cart</a>
-            <span class="closecartcontainer">Close</span> 
-        </div>
-    </div> -->
     <div >
         <?php
         // session_start();
@@ -87,8 +70,6 @@
 
     <table >
 
-
-
         <tbody class="maincardcontainer">
 
             <?php
@@ -115,12 +96,13 @@
 
 		
                 </td>
-                <td><img src="../g-controller/uploads/<?php  echo $test ;?>" alt="" style="width:100px ; height:100px"></td>
+                <td class="cardimgcon"><img src="../g-test2-controller/uploads/<?php  echo $test ;?>" alt="" style="width:100px ; height:100px"></td>
               
                 <td class="cardid" style="display :none;"><span>Id : </span><div id="productid"><?php echo $data ['id'];?></div></td>
                 <td class="cardname"><span>Name : </span><div id="productname"><?php echo $data ['Name'];?></div></td><!--name-->
                 <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
                 <td class="cardlinks">
+                    <div class="shopcartlinks">
                     <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
                     <form action="pbprocess.php" method="post">
                         <div class="cardcountdiv">
@@ -128,12 +110,12 @@
                         <input type="number" name="Count" id="" value="1" min="1" max="50" class="cardcountinput">
                         </div>
                         <!-- <input type="text" name="" id="" value="<?php //echo $data ['id'];?>" > -->
-                       
                         <input type="text" name="Name" id="" value="<?php echo $data ['Name'];?>" style="display :none;">
                         <input type="text" name="Price" id="" value="<?php echo $data ['Price'];?>" style="display :none;">
                         <input type="text" name="Description" id="" value="<?php echo $data ['Description'];?>" style="display :none;">
                         <input type="submit" name="Buy" value=" Buy " class="buybutton">
                     </form>
+                    </div>
                     <a href="delete.php?id=<?php echo $data['id']; ?>" class="carddeletelink">X</a>
                 </td>
              </tr>
