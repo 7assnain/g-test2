@@ -74,13 +74,14 @@ session_start()
      ?>
 
      <tr class="cardcontainer" id="cardcontainer">
-        <td class="cardid"><span>Id : </span><div id="productid"><?php echo $data ['id'];?></div></td>
-        <td class="cardname"><span>Name : </span><div id="productname"><?php echo $data ['Name'];?></div></td><!--name-->
-        <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
-        <td class="cardname"><span>Count : </span><div id="productCount"><?php echo $data ['Count'];?></div></td><!--name-->
-        <td class="cardname"><span>Description : </span><div id="productdesc"><?php echo $data ['Description'];?></div></td><!--name-->
-     </tr>
-     <!-- <input type="text" name="Product_id" id="" value="<?php //echo $data ['id'];?>" > -->
+     <td><img src="../g-test2-controller/uploads/<?php  echo $data['image_url'] ;?>" alt="" style="width:100px ; height:100px"></td>
+         <td class="cardid"><span>Id : </span><div id="productid"><?php echo $data ['id'];?></div></td>
+         <td class="cardname"><span>Name : </span><div id="productname"><?php echo $data ['Name'];?></div></td><!--name-->
+         <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
+         <td class="cardname"><span>Count : </span><div id="productCount"><?php echo $data ['Count'];?></div></td><!--name-->
+         <td class="cardname"><span>Description : </span><div id="productdesc"><?php echo $data ['Description'];?></div></td><!--name-->
+        </tr>
+     <input type="text" name="my_image" id="" value="<?php echo $data ['image_url'];?>" style="display :none;" >
      <input type="text" name="Product_name" id="" value="<?php echo $data ['Name'];?>" style="display :none;">
      <input type="text" name="Product_price" id="" value="<?php echo $data ['Price'];?>" style="display :none;">
      <input type="text" name="Product_count" id="" value="<?php echo $data ['Count'];?>" style="display :none;">
