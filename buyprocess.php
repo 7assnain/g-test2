@@ -7,16 +7,16 @@ if (isset($_POST["Confirm"])) {
     $Userlocation = mysqli_real_escape_string($conn, $_POST["Userlocation"]);//image
     $Paymethod = mysqli_real_escape_string($conn, $_POST["Paymethod"]);//image
     // $Product_id = mysqli_real_escape_string($conn, $_POST["Product_id"]);//image
-    $Product_image = mysqli_real_escape_string($conn, $_POST["Product_image"]);//image
+ 
     $Product_name = mysqli_real_escape_string($conn, $_POST["Product_name"]);//name
     $Product_price = mysqli_real_escape_string($conn, $_POST["Product_price"]);//price
     $Product_count = mysqli_real_escape_string($conn, $_POST["Product_count"]);//description
     $sqlInsert = "INSERT INTO orders
     (Username , Useremail , Userlocation , Paymethod , 
-      Product_image , Product_name , Product_price , Product_count  ) 
+        Product_name , Product_price , Product_count  ) 
     VALUES 
     ('$Username	','$Useremail','$Userlocation', '$Paymethod' ,
-     '$Product_image', '$Product_name', '$Product_price', '$Product_count')";//recorrect table name image , name , price , description
+      '$Product_name', '$Product_price', '$Product_count')";//recorrect table name image , name , price , description
     if(mysqli_query($conn,$sqlInsert)){
 
         session_start();
