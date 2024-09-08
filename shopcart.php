@@ -19,7 +19,7 @@
         font-weight: 800;
         top: 15px;
         left : 5%;
-    }
+    }s
     .headerlogo a {
             color: #566dc5;
     }
