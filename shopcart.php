@@ -102,21 +102,20 @@
              <tr class="cardcontainer" id="cardcontainer">
              <td>
                 <?php 
-                $sql = "SELECT * FROM images  ";//
-                $res = mysqli_query($conn,  $sql);//
+               // $sql = "SELECT * FROM images  ";//
+               // $res = mysqli_query($conn,  $sql);//
 
-                if (mysqli_num_rows($res) > 0) {
-                    while ($images = mysqli_fetch_assoc($res)) {  ?>
+              //  if (mysqli_num_rows($res) > 0) {
+                   // while ($images = mysqli_fetch_assoc($res)) {  ?>
              
-             	        <?php if( $images ['id'] === $data ['id']){ $test= $images ['image_url']; } ?>
+             	        <?php //if( $images ['id'] === $data ['id']){ $test= $images ['image_url']; } ?>
                             <!-- <img src="uploads/<?php //echo $images ['image_url']; ?>" alt="">  -->
                        
-			  <?php } }?> 
+			  <?php //} }?> 
 
-		
+
                 </td>
-                <td><img src="../g-controller/uploads/<?php  echo $test ;?>" alt="" style="width:100px ; height:100px"></td>
-              
+                <td><img src="../g-controller/uploads/<?php  echo $data['image_url'] ;?>" alt="" style="width:100px ; height:100px"></td>
                 <td class="cardid" style="display :none;"><span>Id : </span><div id="productid"><?php echo $data ['id'];?></div></td>
                 <td class="cardname"><span>Name : </span><div id="productname"><?php echo $data ['Name'];?></div></td><!--name-->
                 <td class="cardprice"><span>Price : </span><div id="productprice"><?php echo $data ['Price'];?><span class="dolarsign"> $</span></div></td><!--price-->
@@ -124,15 +123,17 @@
                     <a href="view.php?id=<?php echo $data['id']; ?>" class="cardmorelink">More</a>
                     <form action="pbprocess.php" method="post">
                         <div class="cardcountdiv">
-                        <span>Count : </span>
-                        <input type="number" name="Count" id="" value="1" min="1" max="50" class="cardcountinput">
+                            <span>Count : </span>
+                            <input type="number" name="Count" id="" value="1" min="1" max="50" class="cardcountinput">
                         </div>
                         <!-- <input type="text" name="" id="" value="<?php //echo $data ['id'];?>" > -->
-                       
+                        
+                        
+                        <input type="text" name="my_image" id="" value="<?php echo $data ['image_url'];?>" style="display :none;">
                         <input type="text" name="Name" id="" value="<?php echo $data ['Name'];?>" style="display :none;">
                         <input type="text" name="Price" id="" value="<?php echo $data ['Price'];?>" style="display :none;">
                         <input type="text" name="Description" id="" value="<?php echo $data ['Description'];?>" style="display :none;">
-                        <input type="submit" name="Buy" value=" Buy " class="buybutton">
+                        <input type="submit" name="Buy" value="Buy"class="buybutton">
                     </form>
                     <a href="delete.php?id=<?php echo $data['id']; ?>" class="carddeletelink">X</a>
                 </td>
